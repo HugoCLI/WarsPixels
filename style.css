@@ -1,0 +1,8 @@
+.menu {
+    background: rgba(41,38,53,255);
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+    height: 75px;
+}
