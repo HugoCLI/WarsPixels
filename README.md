@@ -1,2 +1,2 @@
 # WarsPixels.com
-The game on warspixels.com - Official Github
+The game on [https://warspixels.com](warspixels.com) - Official Github
