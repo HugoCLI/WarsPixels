@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+    <url>
+        <loc>https://en.warspixels.com/</loc>
+        <lastmod>2022-04-14T00:46:13+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://de.warspixels.com/</loc>
+        <lastmod>2022-04-14T00:46:13+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://fr.warspixels.com/</loc>
+        <lastmod>2022-04-14T00:46:13+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://warspixels.com/</loc>
+        <lastmod>2022-04-14T00:46:13+00:00</lastmod>
+    </url>
+
+
+</urlset>

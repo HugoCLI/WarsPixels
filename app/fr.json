@@ -1,0 +1,15 @@
+{
+  "welcome": "Quel pays va gagner cette guerre ?",
+  "description": "Plusieurs équipes, une équipe, un pays. Obtenez le plus de blocs sur la carte pour être le premier.",
+  "next_block": "Votre prochain bloc",
+  "can_place": "Placez !",
+  "country_ranking": "Classement de votre pays",
+  "country_ranking_subtitle": "Vous êtes %rank% avec %score% blocs.",
+  "chose_color": "Choisissez la couleur a placer",
+  "online": "En ligne ",
+  "cords": "Cords ",
+  "connection": "Connexion au jeu",
+  "await_data": "En attente des données essentielles",
+  "assign_to_team": "Affectation à une équipe",
+  "detecting_language": "Détection de la langue"
+}

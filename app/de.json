@@ -1,0 +1,15 @@
+{
+  "welcome": "Welches Land wird diesen Krieg gewinnen?",
+  "description": "Mehrere Teams, ein Team, ein Land. Holen Sie sich den größten Block auf der Karte, um der Erste zu sein.",
+  "next_block": "Dein nächster Block",
+  "can_place": "Ort!",
+  "country_ranking": "Ranking Ihres Landes",
+  "country_ranking_subtitle": "Sie sind %rank% mit %score% Blöcken.",
+  "chose_color": "Wählen Sie die zu platzierende Farbe",
+  "online": "Im Einklang ",
+  "cords": "Schnüre ",
+  "connection": "Spiel-Login",
+  "await_data": "Warten auf wichtige Daten",
+  "assign_to_team": "Zuordnung zu einem Team",
+  "detecting_language": "Spracherkennung"
+}

@@ -1,0 +1,15 @@
+{
+  "welcome": "Which country will win this war?",
+  "description": "Several teams, one team, one country. Get the most block on the map to be first.",
+  "next_block": "Your next block",
+  "can_place": "Place!",
+  "country_ranking": "Ranking of your country",
+  "country_ranking_subtitle": "You are %rank% with %score% blocks.",
+  "chose_color": "Choose the color to place",
+  "online": "Online ",
+  "cords": "Cords ",
+  "connection": "Connection to the playground",
+  "await_data": "Awaiting essential data",
+  "assign_to_team": "Assignment to a team",
+  "detecting_language": "Language detection"
+}
