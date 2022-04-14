@@ -129,6 +129,111 @@ main .pos r:last-child {
     height: 12px;
 }
 
+aside.notification {
+    top: -200px;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    margin: 25px auto 0;
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 10px;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    color: #eee;
+    width: 300px;
+    cursor: pointer;
+    display: grid;
+    transition: 500ms;
+    grid-template-columns: 60px calc(100% - 60px);
+    font-family: rubik;
+    align-items: center;
+}
+
+
+.about {
+    position: fixed;
+    left: 25px;
+    font-family: 'Rubik';
+    top:25px;
+    z-index:100;
+    background:#fafafa;
+    border-radius: 5px;
+    padding:27px 25px 25px 25px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    width: 400px;
+    transition: 250ms;
+    opacity: 1;
+    transform:translateY(0);
+}
+.about p {
+    font-size: 16px;
+    color:#404040;
+    line-height: 1.5em;
+}
+
+.about .network {
+    margin-top:25px;
+}
+
+.about .network a {
+    color:#2629EA;
+    font-weight: 500;
+    text-decoration: none;
+}
+.about .network a:hover {
+    text-decoration: underline;
+}
+
+.about h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color:#000000;
+    margin-top:2.5px;
+    margin-bottom: 25px;
+}
+
+.about.mask {
+    opacity: 0;
+    visibility: hidden;
+    transform:translateY(-25px);
+}
+
+.about svg {
+    cursor: pointer;
+    width: 25px;
+    float:right;
+    height: 25px;
+    transition: 150ms;
+}
+
+
+.about svg:hover {
+    transform:scale(1.1);
+}
+
+.about svg path {
+    stroke:#505050;
+}
+
+aside.notification:hover {
+    top: 0;
+}
+
+aside.notification.display {
+    top: 0;
+}
+aside.notification p {
+    color: #959595;
+    margin-top: 3px;
+}
+aside.notification .icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
 main nav {
     background: rgba(41, 38, 53, 255);
     position: fixed;
@@ -154,7 +259,7 @@ main .ranked {
     width: 350px;
     transition: 500ms;
     height: 70px;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -264,7 +369,7 @@ main .block_status {
     position: fixed;
     bottom: 40px;
     left:40px;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     background:#181818;
     z-index: 20;
     height: 70px;
@@ -278,7 +383,7 @@ main .block_status h4 {
 }
 
 main .block_status h3 {
-    font-size: 15px;
+    font-size: 18px;
     color:#eee;
     margin-top:5px;
 

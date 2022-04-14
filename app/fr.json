@@ -11,5 +11,10 @@
   "connection": "Connexion au jeu",
   "await_data": "En attente des données essentielles",
   "assign_to_team": "Affectation à une équipe",
-  "detecting_language": "Détection de la langue"
+  "detecting_language": "Détection de la langue",
+  "reboot_system": "Redémarrage du système",
+  "join_discord": "Rejoint notre Discord",
+  "click_join": "Clique ici pour rejoindre",
+  "welcome_to": "Bienvenue sur",
+  "about_description": "WarsPixels, est un jeu dont le but est d'être le pays possédant le plus de blocs posés à son actif, vous pouvez, sur une grille, déposer des pixels de couleurs toutes les minutes afin de dessiner ce que vous voulez. Regroupez-vous dans des alliances avec d'autres personnes de votre pays dans le but de créer et défendre vos structures."
 }

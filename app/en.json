@@ -11,5 +11,10 @@
   "connection": "Connection to the playground",
   "await_data": "Awaiting essential data",
   "assign_to_team": "Assignment to a team",
-  "detecting_language": "Language detection"
+  "detecting_language": "Language detection",
+  "reboot_system": "Rebooting system",
+  "join_discord": "Join our Discord!",
+  "click_join": "Click to join",
+  "welcome_to": "Welcome to",
+  "about_description": "WarsPixels, is a game where the goal is to be the country with the most blocks placed to its credit, you can, on a grid, drop pixels of colors every minute to draw what you want. Group together in alliances with other people from your country in order to create and defend your structures."
 }

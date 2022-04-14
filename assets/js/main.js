@@ -11,6 +11,7 @@ const audio = {
 }
 
 
+
 function startChrono() {
     if (configs.expires - 1000 > new Date().getTime()) {
         let res = (configs.expires - new Date().getTime()).toString();
@@ -83,6 +84,7 @@ canvas.addEventListener('click', (e) => {
 const blocTraite = (color) => {
     if (configs.pick && configs.pick.x >= 0 && configs.pick.y >= 0 && configs.pick.x <= system.restricted.x && configs.pick.y <= system.restricted.y)
         system.blockRequest(configs.pick, color);
+
 }
 
 const ranked = doc.first('.ranked');
@@ -90,7 +92,10 @@ const showRanked = () => {
     if(ranked.classList.contains('display')) ranked.classList.remove('display');
     else ranked.classList.add('display');
 }
+
+
 const interact = () => {
+
     const mouseElm = doc.first('.render .adjuster');
     mouseElm.onmousedown = function (event) {
         isDrag = true;

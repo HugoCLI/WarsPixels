@@ -11,5 +11,10 @@
   "connection": "Spiel-Login",
   "await_data": "Warten auf wichtige Daten",
   "assign_to_team": "Zuordnung zu einem Team",
-  "detecting_language": "Spracherkennung"
+  "detecting_language": "Spracherkennung",
+  "reboot_system": "Neustart des Systems",
+  "join_discord": "Tritt unserem Discord bei",
+  "click_join": "Klicken Sie hier, um beizutreten",
+  "welcome_to": "Willkommen bei",
+  "about_description": "WarsPixels, ist ein Spiel, dessen Ziel es ist, das Land mit den meisten Blöcken zu sein, die auf seinem Konto liegen. Sie können jede Minute farbige Pixel auf ein Raster fallen lassen, um zu zeichnen, was immer Sie möchten wollen. Verbünde dich mit anderen Menschen in deinem Land, um deine Strukturen aufzubauen und zu verteidigen."
 }

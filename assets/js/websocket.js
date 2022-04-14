@@ -50,9 +50,11 @@ class api {
         new Promise(resolve => setTimeout(resolve, 2000));
         await this.getCountry();
         this.websocket = new WebSocket('wss://warspixels.com/ics');
+        doc.first('#loader-status').innerText = "Waiting line";
         this.websocket.addEventListener('open', (event) => this.configs());
         this.websocket.addEventListener('message', (event) => this.onmessage(event.data));
         this.websocket.addEventListener('close', (event) => this.onclose(event));
+
 
     }
 
@@ -62,10 +64,15 @@ class api {
         if (!data.response) return;
 
 
+
+        if (data.response_type === 'maintenance' && data.response === true) return this.maintenance(true);
+        if (data.response_type === 'maintenance' && data.response === false) return this.maintenance(false)
         if (data.response_type === 'configs') return this.configs(data);
         if (data.response_type === 'configs-bloc') return this.superBlocks(data.response);
         if (data.response_type === 'bloc') return this.block(data.response);
         if (data.response_type === 'stats') return this.ranked(data.response);
+
+
         if (data.response_type === 'bypass')
             document.querySelectorAll('.maintenance')[0].remove();
     }
@@ -74,6 +81,25 @@ class api {
         this.blockPlace({pos: {x: obj.pos.x, y: obj.pos.y}, color: obj.color});
     }
 
+    maintenance(mode) {
+        if(mode) {
+            doc.first('aside.loader').classList.remove('hide');
+            doc.first('aside.loader #loader-status').innerText = 'Current maintenance';
+
+            setTimeout(() => {
+                let json = this.tmpJson;
+                json.token = this.token();
+                json.maintenance = "check";
+                this.send({json});
+            }, 5000)
+        } else{
+            doc.first('aside.loader').classList.add('hide');
+        }
+    }
+
+    async queue(obj) {
+        console.log(obj);
+    }
     async superBlocks(obj) {
         let index = 1;
         let length = Object.keys(obj).length;
@@ -138,7 +164,6 @@ class api {
     }
 
     async blockRequest(cords, color) {
-        this.blockPlace({pos: {x: cords.x, y: cords.y}, color: color});
         let country = await this.getCountry();
         let json = this.tmpJson;
         json.token = this.token();
@@ -160,9 +185,12 @@ class api {
     }
 
     onclose(event) {
+        doc.first('aside.loader').classList.remove('hide');
+        window.focus();
+        doc.first('aside.loader #loader-status').innerText = textLang.reboot_system;
         setTimeout(() => {
             window.location = "";
-        }, 3000)
+        }, Math.floor(Math.random() * (10 - 5)) + 5 * 1000)
     }
 
     token() {
@@ -175,7 +203,6 @@ class api {
 
     async configs(data = null) {
         if (!data) {
-            doc.first('aside.loader p').innerText = textLang.await_data;
             let country = await this.getCountry();
             let json = this.tmpJson;
             json.language = country;
@@ -184,9 +211,10 @@ class api {
             json.token = this.token();
             this.send(json);
         } else {
-            configs.expires = data.response.nextBloc;
+            console.log(data.response.nextBloc);
+            configs.expires = new Date().getTime() + (data.response.nextBloc);
             if (configs.expires - new Date().getTime() > 0) startChrono();
-            /*            else document.querySelectorAll("#next_block")[0].innerHTML = "Place!";*/
+            else doc.first('.block_status h3').innerHTML = "Place!";
 
         }
     }

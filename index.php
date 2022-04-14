@@ -6,7 +6,8 @@ $langs = array(
     'EN' => "EN",
     'DE' => 'DE',
     'CA' => 'EN',
-    'BE' => 'FR'
+    'BE' => 'FR',
+    'IT' => 'IT'
 );
 
 $subdomain = "en";
@@ -38,7 +39,6 @@ if (is_file('app/' . strtolower($subdomain) . '.json')) {
 <head>
     <meta charset="utf-8">
     <meta name="theme-color" content="dark">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="alternate" hreflang="fr" href="https://fr.warspixels.com"/>
     <link rel="alternate" hreflang="en" href="https://en.warspixels.com"/>
@@ -48,7 +48,7 @@ if (is_file('app/' . strtolower($subdomain) . '.json')) {
     <meta name="description" content="<?= $meta['description'] ?>">
     <meta name="author" content="Hugo Chilemme">
 
-    <meta content="NOFOLLOW, NOARCHIVE" name="robots">
+    <meta content="NOARCHIVE" name="robots">
     <meta property="og:title" content="WarsPixels - <?= $meta['welcome'] ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://warspixels.com">
@@ -66,39 +66,51 @@ if (is_file('app/' . strtolower($subdomain) . '.json')) {
     <link rel="stylesheet"
           href="/assets/css/style.css?v=<?= filemtime('/apps/website/warspixels.com/assets/css/style.css') ?>">
     <script>const ACCEPT_LANG = "<?= $langSelect; ?>";
-        const SRV_HOST = "<?= $_SERVER['HTTP_HOST'] ?>"; SUB_HOST = "<?= $subavailable ?>"; </script>
+        const SRV_HOST = "<?= $_SERVER['HTTP_HOST'] ?>";
+        SUB_HOST = "<?= $subavailable ?>"; </script>
 
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-TJ39NNP');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LYTWKJZPJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-7LYTWKJZPJ');
+    </script>
 </head>
 <body>
+<article class="about">
+    <svg onclick="doc.first('.about').classList.add('mask')" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+    <p>
+        <h2><r text="welcome_to"></r> WarsPixels</h2>
+        <p text="about_description">
+            WarsPixels, is a game where the goal is to be the country with the most blocks placed to its credit, you can, on
+            a grid, drop pixels of colors every minute to draw what you want. Group together in alliances with other people
+            from your country in order to create and defend your structures.
+        </p>
+        <div class="network">
+            <a href="https://discord.gg/Kc4yG9EGFY" target="_blank">Discord</a>
+        </div>
+    </p>
+</article>
 <aside class="loader">
-    <h1>WarsPixels
-        <thin>.com</thin>
-    </h1>
+    <h1>WarsPixels<thin>.com</thin></h1>
     <h2 text="welcome">Which country will win this war?</h2>
     <div class="bottom">
         <svg viewBox="25 25 50 50">
             <circle cx="50" cy="50" r="20"></circle>
         </svg>
-        <p id="loader-status" text="detecting_language">Detecting language</p>
+        <p id="loader-status" text="detecting_language">Checking integrity</p>
     </div>
 </aside>
 <main>
-
     <div class="container">
         <div class="ranked">
             <div class="displayed" onclick="showRanked()">
@@ -189,7 +201,7 @@ if (is_file('app/' . strtolower($subdomain) . '.json')) {
         </div>
     </div>
     <section class="render">
-        <div class="enlarge" >
+        <div class="enlarge">
             <div class="adjuster">
                 <div class="selector hide"></div>
                 <canvas id="canvas"></canvas>
@@ -203,7 +215,7 @@ if (is_file('app/' . strtolower($subdomain) . '.json')) {
         <r id="pos_online">0</r>
         <text text="cords"></text>
         :
-        <r id="pos_cord">Place!</r>
+        <r id="pos_cord">0:0</r>
     </div>
 </main>
 <audio id="bloc_place" class="hide">
@@ -217,11 +229,5 @@ if (is_file('app/' . strtolower($subdomain) . '.json')) {
 <script src="/assets/js/main.js?v=<?= filemtime('/apps/website/warspixels.com/assets/js/main.js') ?>"></script>
 <script src="/assets/js/websocket.js?v=<?= filemtime('/apps/website/warspixels.com/assets/js/websocket.js') ?>"></script>
 <script src="/assets/js/modules/lang.js?v=<?= filemtime('/apps/website/warspixels.com/assets/js/modules/lang.js') ?>"></script>
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ39NNP" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
 </body>
 </html>

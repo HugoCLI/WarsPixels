@@ -1,0 +1,20 @@
+{
+  "welcome": "Quale paese vincerà questa guerra?",
+  "description": "Diverse squadre, una squadra, un paese. Ottieni il maggior numero di blocchi sulla mappa per essere il primo.",
+  "next_block": "Il tuo prossimo blocco",
+  "can_place": "Posto!",
+  "country_ranking": "Classifica del tuo paese",
+  "country_ranking_subtitle": "Sei %rank% con %score% blocchi.",
+  "chose_color": "Scegli il colore da posizionare",
+  "online": "In linea ",
+  "cords": "Coord ",
+  "connection": "Collegamento al parco giochi",
+  "await_data": "In attesa di dati essenziali",
+  "assign_to_team": "Assegnazione a una squadra",
+  "detecting_language": "Rilevamento della lingua",
+  "reboot_system": "Riavvio del sistema",
+  "join_discord": "Unisciti alla nostra Discord!",
+  "click_join": "Fare clic per partecipare",
+  "welcome_to": "Benvenuto in",
+  "about_description": "WarsPixels, è un gioco il cui obiettivo è quello di essere il paese con il maggior numero di blocchi al suo attivo, puoi, su una griglia, far cadere pixel colorati ogni minuto per disegnare qualunque cosa tu volere. Raccogli alleanze con altre persone nel tuo paese per creare e difendere le tue strutture."
+}

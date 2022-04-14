@@ -8,11 +8,11 @@ class Lang {
                 window.location = "https://" + SUB_HOST + ".warspixels.com";
         }
 
-        this.load();
+        setTimeout(() => this.load(), 500);
     }
 
     async load() {
-        console.log(this.lang.toLowerCase());
+        doc.first('#loader-status').innerText = "Detecting language";
         let response = await fetch('https://warspixels.com/app/' + this.lang.toLowerCase() + '.json');
         let data = await response.json();
         textLang = data;
@@ -35,7 +35,7 @@ class Lang {
 
     onready() {
         doc.first('#loader-status').innerText = textLang.connection;
-        system = new api();
+        setTimeout(() => system = new api(), 500);
 
     }
 
